@@ -23,7 +23,7 @@ p {
 
 .nameText{
   transform: rotate(180deg);
-
+  
   writing-mode: vertical-rl;
   text-orientation: sideways;
   text-transform: uppercase;

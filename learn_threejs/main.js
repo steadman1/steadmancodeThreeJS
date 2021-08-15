@@ -61,13 +61,14 @@ gltfLoader.load("assets/globe/globeGLTF.gltf", (obj) => {
     scene.add(globe.scene);
 });
 
-Array(150).fill().forEach(element => {
+Array(200).fill().forEach(element => {
     const geometry = new Three.SphereGeometry(1, 10, 10);
     const material = new Three.MeshStandardMaterial();
     const star = new Three.Mesh(geometry, material);
-    const [x,y,z] = Array(3).fill().map(() => Three.MathUtils.randFloatSpread(2000));
+    const [x,y,z] = new Array(3).fill().map(() => Three.MathUtils.randFloatSpread(1000));
     star.position.set(x, y, z);
     scene.add(star);
+    console.log(x, y, z)
 });
 
 // window.addEventListener("resize", () => {
