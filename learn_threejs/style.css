@@ -5,6 +5,10 @@
   src: url("assets/Akira\ Expanded.otf");
 }
 
+text {
+  user-select: none;
+}
+
 canvas {
   position: fixed;
   top: 0;
@@ -15,15 +19,45 @@ p {
   margin: 5px;
 }
 
+.loadText {
+  transition: opacity 0.3s ease-in;
+
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-family: "akira";
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+.visible {
+  display: initial;
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+
+.loadProgress {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 .nameContainer {
   height: 100%;
   left: 0;
   position: fixed;
 }
 
+
 .nameText{
   transform: rotate(180deg);
-  
+
+  user-select: none;
   writing-mode: vertical-rl;
   text-orientation: sideways;
   text-transform: uppercase;
@@ -32,6 +66,11 @@ p {
   font-family: "akira";
 }
 
-body {
-  background-color: #000;
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
