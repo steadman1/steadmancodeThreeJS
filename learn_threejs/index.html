@@ -7,19 +7,30 @@
     <title>Three.js App</title>
   </head>
   <body class="unselectable" style="background-color: #000;">
-    <div class="loadProgress visible">
-      <span class="loadText hidden" id="loadEnterText">enter</span>
-      <span class="loadText visible" id="loadProgressText">0 %</span>
+    <div class="loadProgress" style="text-align: center;">
+      <span class="loadText" id="loadEnterText" style="display: none;">scroll to enter</span>
+      <span class="loadText" id="loadProgressText">0 %</span>
     </div>
-    <div class="nameContainer hidden" id="nameContainer">
+    <div class="nameContainer hidden" id="nameContainer" style="display: none;">
       <span class="nameText">spencer steadman</span>
     </div>
     <canvas id="threeCanvas"></canvas>
+    
     <script type="module" src="/main.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
       crossorigin="anonymous">
+    </script>
+    <script>
+      const elem = document.documentElement;
+      if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) { /* Safari */
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { /* IE11 */
+          elem.msRequestFullscreen();
+      }
     </script>
   </body>
 </html>

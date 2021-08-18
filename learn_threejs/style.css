@@ -9,10 +9,16 @@ text {
   user-select: none;
 }
 
+body, html {
+  height: 100%;
+  overflow: hidden;
+}
+
 canvas {
   position: fixed;
   top: 0;
   right: 0;
+  overflow: hidden;
 }
 
 p {
@@ -20,23 +26,11 @@ p {
 }
 
 .loadText {
-  transition: opacity 0.3s ease-in;
 
+  text-align: end;
   color: rgb(255, 255, 255);
   font-size: 20px;
   font-family: "akira";
-}
-
-.hidden {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.3s ease-in;
-}
-
-.visible {
-  display: initial;
-  opacity: 1;
-  transition: opacity 0.3s ease-in;
 }
 
 .loadProgress {
