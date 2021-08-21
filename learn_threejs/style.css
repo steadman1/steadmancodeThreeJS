@@ -26,7 +26,6 @@ p {
 }
 
 .loadText {
-
   text-align: end;
   color: rgb(255, 255, 255);
   font-size: 20px;
@@ -47,6 +46,15 @@ p {
   position: fixed;
 }
 
+.fogWall {
+  background-color: rgb(202, 202, 202);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
 
 .nameText{
   transform: rotate(180deg);

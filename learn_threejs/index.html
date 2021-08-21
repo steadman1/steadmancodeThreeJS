@@ -15,7 +15,7 @@
       <span class="nameText">spencer steadman</span>
     </div>
     <canvas id="threeCanvas"></canvas>
-    
+    <div class="fogWall" id="fogWall" style="display: none;"></div>
     <script type="module" src="/main.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
@@ -23,6 +23,8 @@
       crossorigin="anonymous">
     </script>
     <script>
+      document.body.scroll = "no";
+
       const elem = document.documentElement;
       if (elem.requestFullscreen) {
           elem.requestFullscreen();
